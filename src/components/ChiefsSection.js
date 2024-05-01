@@ -9,7 +9,7 @@ export default function ChiefsSection() {
       cuisine: "Mexican",
     },
     {
-      name: "Jam Doe",
+      name: "Con Doe",
       img: "/img/top-chiefs/img_2.jpg",
       recipesCount: "05",
       cuisine: "Japanese",
@@ -33,7 +33,7 @@ export default function ChiefsSection() {
       cuisine: "French",
     },
     {
-      name: "Ben Aftocks",
+      name: "Ben Stonks",
       img: "/img/top-chiefs/img_6.jpg",
       recipesCount: "04",
       cuisine: "Indian",
