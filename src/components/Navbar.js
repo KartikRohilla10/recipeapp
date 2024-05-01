@@ -10,7 +10,7 @@ export default function Navbar(){
     const location = useLocation()
     const links = [
         {
-            name: "Home",
+            name: "Homes",
             path: "/",
             icon: faHome
         },
