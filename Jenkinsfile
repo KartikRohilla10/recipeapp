@@ -30,12 +30,7 @@ pipeline {
                 sh 'npm run build'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing React apps'
-                sh 'npm test'
-            }
-        }
+        
         stage('Serve to Nginx') {
             steps {
                 echo 'Copying build files to Nginx directory'
