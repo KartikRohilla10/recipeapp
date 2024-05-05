@@ -15,7 +15,7 @@ export default function ChiefsSection() {
       cuisine: "Japanese",
     },
     {
-      name: "Erich Mehta",
+      name: "Erich Mishra",
       img: "/img/top-chiefs/img_3.jpg",
       recipesCount: "13",
       cuisine: "Italian",
@@ -33,7 +33,7 @@ export default function ChiefsSection() {
       cuisine: "French",
     },
     {
-      name: "Ben Stonks",
+      name: "Ben Aftocks",
       img: "/img/top-chiefs/img_6.jpg",
       recipesCount: "04",
       cuisine: "Indian",
