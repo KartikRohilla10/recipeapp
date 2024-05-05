@@ -53,7 +53,7 @@ pipeline {
                     to: 'devops.jenkins.report@gmail.com',
                     cc: '',
                     subject: "Build for ${JOB_NAME} has completed",
-                    body: "Dear Team,\n\nThis is an automated notification to inform you that the ${JOB_NAME} build has completed successfully.\n\nDetails:\n- Build Number: ${BUILD_NUMBER}\n- Build URL: ${BUILD_URL}\n\nPlease review the build details and take any necessary actions.\n\nBest regards,\nYour Jenkins Server"
+                    body: "Dear Team,\n\nThis is an automated notification to inform you that the ${JOB_NAME} build has completed successfully.\n\nDetails:\n- Build Number: ${BUILD_NUMBER}\n- Build URL: ${BUILD_URL}\n- Application URL: http://15.206.91.225:3300/ \n\nPlease review the build details and take any necessary actions.\n\nBest regards,\nYour Jenkins Server"
                 )
             }
         }
