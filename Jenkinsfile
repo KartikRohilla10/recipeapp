@@ -49,7 +49,20 @@ pipeline {
         }
          stage('Email') {
             steps {
-                emailext attachLog: true, body: '', subject: 'Jenkins build report', to: 'devops.jenkins.report@gmail.com'
+                mail bcc: '', body: '''Dear Team,
+
+This is an automated notification to inform you that the ${JOB_NAME} build has completed successfully.
+
+Details:
+- Build Number: ${BUILD_NUMBER}
+- Build Status: ${BUILD_STATUS}
+- Build URL: ${BUILD_URL}
+
+Please review the build details and take any necessary actions.
+
+Best regards,
+Your Jenkins Server
+''', cc: '', from: '', replyTo: '', subject: '"Build for ${JOB_NAME} has completed"', to: 'devops.jenkins.report@gmail.com'
             }
         }
         
