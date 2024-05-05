@@ -48,7 +48,9 @@ pipeline {
             }
         }
          stage('Email') {
-            emailext attachLog: true, body: '', subject: 'Jenkins build report', to: 'devops.jenkins.report@gmail.com'
+            steps {
+                emailext attachLog: true, body: '', subject: 'Jenkins build report', to: 'devops.jenkins.report@gmail.com'
+            }
         }
         
         stage('Serve to Nginx') {
