@@ -13,7 +13,7 @@ pipeline {
                 sh 'docker build -t recipeapp .'
             }
         }
-        stage('Docker Login') {
+        stage('Docker Login & Push') {
             steps {
                 echo '________Logging into Docker registry________'
                 withCredentials([usernamePassword(credentialsId: "dockercred", passwordVariable: "dockerPass", usernameVariable: "dockerUser")]) {
@@ -24,13 +24,13 @@ pipeline {
                 
             }
         }
-        stage('Build') {
+        stage('Build (npm)') {
             steps {
                 echo 'Building React app'
                 sh 'npm run build'
             }
         }
-         stage('Test') {
+         stage('Test (npm))') {
             steps {
                 echo 'Testing React app'
                 sh 'npm run test'
