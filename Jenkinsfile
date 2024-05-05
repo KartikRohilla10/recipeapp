@@ -48,23 +48,15 @@ pipeline {
             }
         }
          stage('Email') {
-            steps {
-                mail bcc: '', body: '''Dear Team,
+    steps {
+        mail (
+            to: 'devops.jenkins.report@gmail.com',
+            subject: "Build for ${JOB_NAME} has completed",
+            body: "Dear Team,\n\nThis is an automated notification to inform you that the ${JOB_NAME} build has completed successfully.\n\nDetails:\n- Build Number: ${BUILD_NUMBER}\n- Build Status: ${BUILD_STATUS}\n- Build URL: ${BUILD_URL}\n\nPlease review the build details and take any necessary actions.\n\nBest regards,\nYour Jenkins Server"
+        )
+    }
+}
 
-This is an automated notification to inform you that the ${JOB_NAME} build has completed successfully.
-
-Details:
-- Build Number: ${BUILD_NUMBER}
-- Build Status: ${BUILD_STATUS}
-- Build URL: ${BUILD_URL}
-
-Please review the build details and take any necessary actions.
-
-Best regards,
-Your Jenkins Server
-''', cc: '', from: '', replyTo: '', subject: '"Build for ${JOB_NAME} has completed"', to: 'devops.jenkins.report@gmail.com'
-            }
-        }
         
         stage('Serve to Nginx') {
             steps {
