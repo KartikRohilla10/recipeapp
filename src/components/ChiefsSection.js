@@ -33,7 +33,7 @@ export default function ChiefsSection() {
       cuisine: "French",
     },
     {
-      name: "Ben Aftocks",
+      name: "Ben Affs",
       img: "/img/top-chiefs/img_6.jpg",
       recipesCount: "04",
       cuisine: "Indian",
